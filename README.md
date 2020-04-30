@@ -1,24 +1,30 @@
 # README
+This is <bold>Airbnb dogsitters</bold>, the new app to helps your dog enjoying strolls !
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Here is what you should know about this fantastic project
 
-Things you may want to cover:
+# Versions
+* Ruby version 2.5.1
+* Rails version 5.2.4
 
-* Ruby version
+# Relation between tables
+* Dogsitter - Dog : n - n
+* Dogsitter - Stroll : 1 - n
+* Dog - Stroll : n - n
+* Dog - Outing : n - 1 (creation of Outing as join table)
+* Stroll - Outing : n - 1
+* Dogsitter - City : n - 1
+* Dog - City : n - 1 
+* Stroll - City : n - 1
 
-* System dependencies
 
-* Configuration
+# Run tests
+* $ rails db:seed
+* $ tp a = Dogsitter(11)
+* $ tp a.dogs
+* $ tp a.strolls
+* $ tp Outing.all
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Gem
+* table_print: You can use "tp" to visualize the information as tables
+* faker: To create a fake database
